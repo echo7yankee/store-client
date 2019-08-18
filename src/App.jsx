@@ -6,14 +6,13 @@ import ProductModal from "./components/shop/ProductModal";
 
 //redux
 import { connect } from "react-redux";
-import { getProducts, getProduct } from "./redux/actions/dataActions";
+import { getProducts, getProduct } from "./redux/actions/productsActions";
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      categories: [],
       search: "",
       brand: "Select brand",
       skinType: "Select skin type",
@@ -23,8 +22,8 @@ class App extends Component {
     };
   }
 
-  componentDidMount() {
-    this.props.getProducts();
+  async componentWillMount() {
+    await this.props.getProducts();
   }
 
   onToggle = index => {
@@ -52,6 +51,8 @@ class App extends Component {
   };
 
   render() {
+    console.log(this.props.products);
+
     return (
       <div>
         <Header
@@ -73,8 +74,8 @@ class App extends Component {
               skinType={this.state.skinType}
               brand={this.state.brand}
               age={this.state.age}
-              products={this.props.data.data}
-              isLoading={this.props.data.isLoading}
+              products={this.props.products}
+              isLoading={this.props.isLoading}
               handleChange={this.handleChange}
               toggleModal={this.toggleModal}
             />
@@ -88,7 +89,8 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    data: state
+    products: state.productsReducer.products,
+    isLoading: state.productsReducer.isLoading
   };
 };
 

@@ -1,20 +1,15 @@
-import {
-  GET_PRODUCTS,
-  SET_LOADING_UI,
-  GET_PRODUCT,
-  ADD_PRODUCT_TO_CART
-} from "../types";
+import { GET_PRODUCTS, SET_LOADING_PRODUCTS, GET_PRODUCT } from "../types";
 
 const initialState = {
-  data: [],
+  products: [],
   cart: [],
   product: {},
   isLoading: false
 };
 
-const dataReducer = (state = initialState, action) => {
+function productsReducer(state = initialState, action) {
   switch (action.type) {
-    case SET_LOADING_UI:
+    case SET_LOADING_PRODUCTS:
       return {
         ...state,
         isLoading: true
@@ -23,7 +18,7 @@ const dataReducer = (state = initialState, action) => {
     case GET_PRODUCTS:
       return {
         ...state,
-        data: action.payload,
+        products: action.payload,
         isLoading: false
       };
 
@@ -32,16 +27,9 @@ const dataReducer = (state = initialState, action) => {
         ...state,
         product: action.payload
       };
-
-    case ADD_PRODUCT_TO_CART:
-      return {
-        ...state,
-        cart: [...state.cart, action.payload]
-      };
-
     default:
       return state;
   }
-};
+}
 
-export default dataReducer;
+export default productsReducer;

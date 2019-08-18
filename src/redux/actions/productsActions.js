@@ -1,5 +1,5 @@
 import {
-  SET_LOADING_UI,
+  SET_LOADING_PRODUCTS,
   GET_PRODUCTS,
   GET_PRODUCT,
   ADD_PRODUCT_TO_CART
@@ -9,7 +9,7 @@ import axios from "axios";
 export const getProducts = () => async dispatch => {
   try {
     dispatch({
-      type: SET_LOADING_UI
+      type: SET_LOADING_PRODUCTS
     });
     const response = await axios.get("/products");
     const { data } = response;
