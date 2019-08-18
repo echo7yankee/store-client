@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white-color: #ffffff;
+  --main-yellow: #f8cb00;
+  --blue-color-1: #6364d8;
+  --blue-color-2: #393ab1;
+  --grey-color-1: #d4d4d4;
+  --grey-color-2: #7b7b7b;
+  --grey-color-3: #8f8f8f;
+  --black-color-1: #171717;
+  --black-color-2: #131313;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
+  min-height: 100vh;
+}
+
+input,
+input::placeholder {
+  font-family: "Roboto", sans-serif;
+  color: var(--black-color-1);
+  font-size: 1.6rem;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: flex;
+  padding: 1rem;
+}
+
+.container-col-1 {
+  width: 25%;
+}
+
+.container-col-1-padding {
+  padding-top: 1.5rem;
+}
+
+.container-col-2 {
+  width: 75%;
+  margin-left: 2.5rem;
+}
+
+/* margins */
+/* margin-right */
+.mr-1 {
+  margin-right: 1rem;
+}
+.mr-2 {
+  margin-right: 2rem;
+}
+.mr-3 {
+  margin-right: 3rem;
+}
+.mr-4 {
+  margin-right: 4rem;
+}
+.mr-5 {
+  margin-right: 5rem;
+}
+
+/* generic */
+.pointer {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 992px) {
+  html {
+    font-size: 58.5%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 57.5%;
+  }
+
+  .container-col-1 {
+    display: none;
+  }
+
+  .container-col-2 {
+    width: 100%;
+    margin: 8rem auto;
+  }
+
+  .container-header {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 55.5%;
+  }
+}

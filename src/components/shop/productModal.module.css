@@ -1,0 +1,187 @@
+.overlay,
+.overlayOpen {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  display: none;
+}
+
+.overlayOpen {
+  display: block;
+}
+
+.modalArrow,
+.modalButtonCartIcon {
+  visibility: hidden;
+}
+
+.modal {
+  width: 70rem;
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
+}
+
+.modalFlex {
+  display: flex;
+}
+
+.modal img {
+  width: 30rem;
+  height: auto;
+}
+
+.colTwo {
+  margin-left: 4rem;
+}
+
+.modalStars i {
+  color: #ff5a00;
+  font-size: 1.2rem;
+  order: 1;
+}
+
+.modalRating span {
+  color: #b4b4b4;
+  font-size: 1.4rem;
+}
+
+.modalRatingMobile {
+  display: none;
+}
+
+.modalTitle {
+  margin: 20px 0;
+}
+
+.modalTitle h3 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.modalItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.modalItem span:first-child {
+  color: #fbe47c;
+}
+
+.modalItem span:last-child {
+  color: #b4b4b4;
+}
+
+.modalButtonCart button {
+  width: 100%;
+  background: transparent;
+  border: none;
+  background: #6364d8;
+  color: #ffffff;
+  padding: 14px 20px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.modalText {
+  margin: 10px 0;
+}
+
+.modalButtonDetails {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.modalButtonDetails button {
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed #b4b4b4;
+  color: #b4b4b4;
+}
+
+.modalClose {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.modalClose i {
+  font-size: 2rem;
+}
+
+/* media querires */
+
+@media only screen and (max-width: 768px) {
+  .modal {
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+  }
+
+  .colTwo {
+    margin: 0;
+  }
+
+  .modalFlex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modalClose {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: static;
+    padding-top: 20px;
+  }
+
+  .modalArrow,
+  .modalButtonCartIcon {
+    visibility: visible;
+  }
+  .modalButtonCart button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    background: var(--main-yellow);
+    text-align: center;
+  }
+
+  .modalButtonCart button i {
+    position: absolute;
+    right: 10px;
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+
+  .modalButtonDetails,
+  .modalCloseIcon,
+  .modalRating {
+    display: none !important;
+  }
+
+  .modalRatingMobile {
+    display: block;
+    color: #b4b4b4;
+    font-size: 1.4rem;
+  }
+
+  .modalRatingMobile i {
+    color: #ff5a00;
+    font-size: 1.2rem;
+    order: 1;
+  }
+}

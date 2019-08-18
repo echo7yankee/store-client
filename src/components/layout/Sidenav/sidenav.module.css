@@ -1,0 +1,142 @@
+.categoriesMobile {
+  display: none;
+}
+
+.categories {
+  width: 100%;
+  background: var(--white-color);
+  padding: 2rem 0 2rem 2rem;
+  transform: translateY(-7.3rem);
+  border-radius: 3px;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.08);
+}
+
+.item,
+.titleItem {
+  cursor: pointer;
+}
+
+.categories h1 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--grey-color-1);
+}
+
+.items {
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.titleItem {
+  font-weight: 500;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
+
+.titleItem:hover {
+  color: var(--main-yellow);
+}
+
+.itemGroup {
+  margin-bottom: 2rem;
+}
+
+.item {
+  margin: 1rem 0;
+  color: var(--grey-color-2);
+  font-size: 1.3rem;
+}
+
+.item:hover {
+  color: var(--main-yellow);
+}
+
+.itemActive {
+  color: var(--main-yellow);
+}
+
+.advertisement {
+  background: url("../../../static/sidenav.jpg");
+  background-size: contain;
+  width: 100%;
+  padding: 2rem 0 2rem 2rem;
+  transform: translateY(-5rem);
+}
+
+.advertisement div:first-child h1 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 10.3rem;
+}
+
+.advertisement div:nth-child(2) {
+  margin-bottom: 2rem;
+}
+
+.advertisement div:nth-child(2) h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.advertisement div:nth-child(3) h1 {
+  font-size: 3rem;
+  color: var(--blue-color-2);
+  font-weight: 500;
+}
+
+.categoriesContainer {
+  overflow: hidden;
+}
+
+.categoriesContainer button {
+  margin: 0.6rem 0;
+  border: none;
+  background: transparent;
+  color: var(--black-color-2);
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+
+.categoriesContainer button:hover {
+  color: var(--main-yellow);
+}
+
+.subCategory ul li {
+  list-style: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: var(--grey-color-2);
+}
+
+.subCategory ul li:hover {
+  color: var(--main-yellow);
+}
+
+.subCategories {
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.subCategoriesShow {
+  max-height: 23rem;
+  transition: max-height 0.5s ease-in-out;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 900px) {
+  .categories {
+    background: transparent;
+    transform: translate(0);
+    padding: 0;
+  }
+
+  .titleItem {
+    color: var(--white-color);
+  }
+
+  .itemGroup {
+    display: none;
+  }
+}
